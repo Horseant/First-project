@@ -13,3 +13,84 @@ serif：没有衬线的字体
 monospace：每个字符拥有相同的宽度的字体，通常用于代码列表
 cursive：用于模拟笔迹的字体，具有流动的连体笔画 
 fantasy:用来装饰的字体
+
+3、字体栈
+若无法保证一种字体的可用性，可以提供一个字体栈这样的话，浏览器就有多种字体可以选择了。只需包含一个font-family属性，其值由几个用逗号分离的字体
+名称组成，例如
+
+p{
+    font-family:"Trebuchet MS",Verdana,san-serif;
+}
+在这种情况下，浏览此会依次检索字体是否可用
+注意：字体名称不止一个单词的字体名称，用""包裹，如上"Trebuchet MS"
+
+4、各种字体的颜色
+改变字体颜色的引用方法为使用color属性
+
+p{
+ color:red;
+ font-family:Hevetica,Aria,san-serif;
+
+}
+
+5、设置字体的大小
+字体大小通过font-size属性设置，可以px（像素）、em、x%（百分比）等设置字体大小
+
+6、4种常用属性改本文本的样子
+
+font-style: 用来打开和关闭文本 italic (斜体)。 可能的值如下 (你很少会用到这个属性，除非你因为一些理由想将斜体文字关闭斜体状态)：
+normal: 将文本设置为普通字体 (将存在的斜体关闭)
+italic: 如果当前字体的斜体版本可用，那么文本设置为斜体版本；如果不可用，那么会利用 oblique 状态来模拟 italics。
+oblique: 将文本设置为斜体字体的模拟版本，也就是将普通文本倾斜的样式应用到文本中。
+
+font-weight: 设置文字的粗体大小。这里有很多值可选 (比如 -light, -normal, -bold, -extrabold, -black, 等等), 不过事实上你很少会用到 normal 
+和 bold以外的值：
+normal, bold: 普通或者加粗的字体粗细
+lighter, bolder: 将当前元素的粗体设置为比其父元素粗体更细或更粗一步。100–900: 数值粗体值，如果需要，可提供比上述关键字更精细的粒度控制。
+
+text-transform: 允许你设置要转换的字体。值包括：
+none: 防止任何转型。
+uppercase: 将所有文本转为大写。
+lowercase: 将所有文本转为小写。
+capitalize: 转换所有单词让其首字母大写。
+full-width: 将所有字形转换成全角，即固定宽度的正方形，类似于等宽字体，允许拉丁字符和亚洲语言字形（如中文，日文，韩文）对齐。
+
+text-decoration: 设置/取消字体上的文本装饰 (你将主要使用此方法在设置链接时取消设置链接上的默认下划线。) 可用值为：
+none: 取消已经存在的任何文本装饰。
+underline: 文本下划线.
+overline: 文本上划线
+line-through: 穿过文本的线 strikethrough over the text.
+你应该注意到 text-decoration 可以一次接受多个值，如果你想要同时添加多个装饰值， 比如 text-decoration: underline overline.。
+同时注意 text-decoration 是一个缩写形式，
+它由 text-decoration-line, text-decoration-style 和 text-decoration-color 构成。你可以使用这些属性值的组合来创建有趣的效果
+
+
+7、文字阴影
+可以使用text-shadow属性，最多需要四个值
+
+p{
+    text-shadow: 4px 4px 5px red;
+}
+
+8、文本对齐
+使用text-align属性
+left：左对齐
+right：右对齐
+center：居中文字
+
+9、行高
+使用line-height属性设置文本每行之间的高
+直接使用数值,一般用1.5或2倍距更好阅读
+p{
+    line-height:1.5
+}
+
+
+
+
+
+
+
+
+
+
