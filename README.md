@@ -1,2 +1,3 @@
-# First-project
-This my first project,it is using for testing
+# 学习记录
+First Day
+第一天创建了github的第一个项目
